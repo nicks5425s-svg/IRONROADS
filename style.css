@@ -1,0 +1,167 @@
+/*
+   1. CONFIGURAÇÕES GERAIS E PALETA DE CORES (HEXA)
+*/
+body {
+    background-color: #0d0d11; /* Preto Charcoal profundo (Fundo do site) */
+    color: #ffffff;            /* Branco puro para textos principais */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+   2. CABEÇALHO E MENU DE NAVEGAÇÃO
+*/
+header {
+    background-color: #16161f; /* Grafite escuro para destacar o menu */
+    padding: 20px 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo em destaque com fonte Bebas Neue */
+.logo-nav {
+    color: #ff2a2a; /* Vermelho Nitro Esportivo (Vibrante) */
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    color: #bcbcbc; /* Cinza claro fosco para melhor leitura */
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos itens do menu */
+nav ul li:hover {
+    color: #ff2a2a; 
+}
+
+/*
+   3. HERO SECTION (TEXTO JUNTADO COM O BANNER)
+*/
+.hero-unificado {
+    /* O linear-gradient cria uma película escura sobre a foto para dar leitura ao texto */
+    background-image: linear-gradient(rgba(13, 13, 17, 0.7), rgba(13, 13, 17, 0.85)), url('/site carros/imagens/bannerr.png');
+    background-size: cover;       /* Faz a imagem cobrir todo o espaço disponível */
+    background-position: center;  /* Centraliza a foto de fundo */
+    background-repeat: no-repeat;
+    min-height: 500px;            /* Altura total do banner principal */
+    display: flex;
+    align-items: center;          /* Centraliza o conteúdo verticalmente */
+    justify-content: center;      /* Centraliza o conteúdo horizontalmente */
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.semititulo {
+    padding: 20px;
+    max-width: 800px;             /* Evita que o texto quebre linhas longas demais */
+}
+
+.semititulo h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #ff2a2a;
+    font-size: 72px;              /* Tamanho gigante de impacto */
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar as letras */
+}
+
+.semititulo p {
+    color: #ffffff;               /* Texto em branco para contrastar com o fundo */
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 30px 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.semititulo button {
+    background-color: #ff2a2a;
+    color: #ffffff;
+    border: none;
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(255, 42, 42, 0.3); /* Efeito luminoso vermelho */
+    transition: all 0.3s ease;
+}
+
+/* Efeito interativo do botão ao passar o mouse */
+.semititulo button:hover {
+    background-color: #cc1f1f;
+    transform: translateY(-3px); /* Faz o botão dar um leve salto para cima */
+    box-shadow: 0 6px 20px rgba(255, 42, 42, 0.5); /* Aumenta o brilho */
+}
+
+/*
+   4. GRADE DE EXIBIÇÃO DOS CARROS (GRID)
+*/
+.grid-carros {
+    display: grid;
+    /* auto-fit cria quantas colunas couberem na tela do usuário automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* Estilização individual dos cartões de carros */
+.card-carro {
+    background-color: #16161f;   /* Fundo do card igual ao cabeçalho */
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 25px;
+    border: 1px solid #22222e;   /* Borda fina e sutil para acabamento premium */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de aproximação ao passar o mouse nos cards de carros */
+.card-carro:hover {
+    transform: scale(1.03);      /* Dá um leve zoom sutil no card */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.card-carro img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-carro h3 {
+    font-size: 22px;
+    margin: 20px 0 5px 0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.card-carro .categoria {
+    color: #ff2a2a;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 0;
+}
